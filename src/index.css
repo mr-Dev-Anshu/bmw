@@ -17,5 +17,22 @@
 }
 
 .buttons{
-    @apply h-12 w-72 bg-white rounded-xl flex flex-col justify-center items-center
+    @apply h-12 flex flex-col justify-center items-center
+}
+
+
+.animate{
+    animation: scrollUp 35s ease-in-out infinite;
+}
+
+@keyframes scrollUp {
+    0%{
+        margin-top: 0%;
+    }
+    50%{
+        margin-top: -40%;
+    }
+    100%{
+        margin-top: -100%;
+    }
 }

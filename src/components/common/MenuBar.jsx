@@ -6,7 +6,7 @@ import { RiPriceTagFill } from "react-icons/ri";
 
 const MenuBar = () => {
   return (
-    <div className="w-full fixed bottom-0 flex justify-around py-4 bg-white">
+    <div className="w-full fixed bottom-0 flex justify-around py-2 bg-white">
       <HashLink to={"/"} className=" menu-button">
         <div className="center">
           <FaHome size={24} />
