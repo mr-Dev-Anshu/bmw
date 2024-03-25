@@ -34,19 +34,25 @@ const SlideButton = () => {
       <div className="flex justify-between px-4 pt-4">
         <p
           onClick={handleProductionClick}
-          className={`buttons rounded-l-md ${showProduction ? "bg-red-600":"bg-blue-600"} text-white font-semibold  w-full cursor-pointer`}
+          className={`buttons rounded-l-md ${
+            showProduction ? "bg-red-600" : "bg-blue-600"
+          } text-white font-semibold  w-full cursor-pointer`}
         >
           Production
         </p>
         <p
           onClick={handleHarvestClick}
-          className={`buttons ${showHarvest ? "bg-red-600":"bg-blue-600"} text-white font-semibold  w-full cursor-pointer`}
+          className={`buttons ${
+            showHarvest ? "bg-red-600" : "bg-blue-600"
+          } text-white font-semibold  w-full cursor-pointer`}
         >
           Harvest
         </p>
         <p
           onClick={handleGiftClick}
-          className={`buttons rounded-r-md ${showGift ? "bg-red-600":"bg-blue-600"} text-white font-semibold  w-full cursor-pointer`}
+          className={`buttons rounded-r-md ${
+            showGift ? "bg-red-600" : "bg-blue-600"
+          } text-white font-semibold  w-full cursor-pointer`}
         >
           Gift
         </p>
@@ -74,6 +80,7 @@ const SlideButton = () => {
             src={bmw}
           />
           <Card
+            title="BMW Cars"
             price="4850"
             dincome="2788"
             tincome="111550"

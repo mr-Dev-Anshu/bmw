@@ -19,13 +19,13 @@ const Card = ({ price, dincome, title, tincome, cycle, src, src2 }) => {
     console.log(order);
 
     var options = {
-      key: "rzp_test_OMGxYYAK8Ggdm9", // Enter the Key ID generated from the Dashboard
-      amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+      key: "rzp_test_OMGxYYAK8Ggdm9",
+      amount, 
       currency,
       name: "BMW",
       description: "Test Transaction",
       image: logo,
-      order_id: order?.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+      order_id: order?.id,
       handler: async function (response) {
         const body={
           ...response
@@ -67,7 +67,7 @@ const Card = ({ price, dincome, title, tincome, cycle, src, src2 }) => {
     rzp1.open();
     e.preventDefault();
   };
-  
+
   return (
     <div className="flex justify-between bg-gray-200 rounded-xl">
       <div className="flex gap-6">
