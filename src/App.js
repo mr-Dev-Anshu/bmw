@@ -4,6 +4,8 @@ import Product from "./components/Product";
 import Tasks from "./components/Tasks";
 import Prize from "./components/Prize";
 import Profile from "./components/Profile";
+import Login from "./components/auth/Login";
+import Register from "./components/auth/Register";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <Route path="/tasks" element={<Tasks />} />
         <Route path="/prize" element={<Prize />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </Router>
   );
