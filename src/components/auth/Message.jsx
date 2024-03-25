@@ -10,7 +10,7 @@ export default function Message() {
   } , [user])
   return (
     <div className="text-xl sm:text-2xl text-green-700 flex justify-center  h-screen items-center ">
-      we have send you an Email please check for verification
+      we have send you an Email please check for verification and after verification go on the home page :: 
     </div>
   );
 }
