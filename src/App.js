@@ -6,6 +6,7 @@ import Prize from "./components/Prize";
 import Profile from "./components/Profile";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
+import Message from "./components/auth/Message"
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/message" element= {<Message /> } /> 
       </Routes>
     </Router>
   );
