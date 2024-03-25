@@ -1,8 +1,12 @@
 import React from "react";
 import MenuBar from "./common/MenuBar";
 import { HashLink } from "react-router-hash-link";
+import { useContext } from "react";
+import { userContext } from "../context/user.context";
 
 const Profile = () => {
+  const { user } = useContext(userContext) ; 
+  
   return (
     <div className=" relative w-full h-[100vh] flex justify-center items-center bg-blue-600">
       <MenuBar />
