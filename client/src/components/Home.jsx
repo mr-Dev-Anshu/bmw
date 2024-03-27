@@ -15,7 +15,7 @@ const Home = () => {
         <SliderComponent />
       </div>
       <div className="flex justify-between items-center mt-4 px-12">
-        <HashLink to={"/telegram"}>
+        <HashLink to={"https://web.telegram.org/"} target="blank">
           <div className="buttons rounded-xl font-semibold text-xl bg-white w-72">
             Telegram
           </div>

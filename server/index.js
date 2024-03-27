@@ -12,6 +12,41 @@ app.use(cors());
 
 app.post("/order", async (req, res) => {
   try {
+    //  Test Code----------------------------->
+    // const instance = new Razorpay({
+    //   key_id: process.env.RAZORPAY_KEY_ID,
+    //   key_secret: process.env.RAZORPAY_SECRET,
+    // });
+
+    // const order = instance.paymentLink.create({
+    //   amount: 500,
+    //   currency: "INR",
+    //   accept_partial: true,
+    //   first_min_partial_amount: 100,
+    //   description: "For XYZ purpose",
+    //   customer: {
+    //     name: "Gaurav Kumar",
+    //     email: "gaurav.kumar@example.com",
+    //     contact: "+919000090000",
+    //   },
+    //   notify: {
+    //     sms: true,
+    //     email: true,
+    //   },
+    //   reminder_enable: true,
+    //   options: {
+    //     checkout: {
+    //       method: {
+    //         netbanking: 1,
+    //         card: 1,
+    //         upi: 1,
+    //         wallet: 1,
+    //       },
+    //     },
+    //   },
+    // });
+
+    //  actual code
     const razorpay = new Razorpay({
       key_id: process.env.RAZORPAY_KEY_ID,
       key_secret: process.env.RAZORPAY_SECRET,

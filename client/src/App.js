@@ -7,6 +7,8 @@ import Profile from "./components/Profile";
 import Team from "./components/pages/Team";
 import VIP from "./components/pages/VIP";
 import Reward from "./components/pages/Reward";
+import PaymentPage from "./components/pages/PaymentPage";
+import UTR from "./components/pages/UTR";
 
 function App() {
   return (
@@ -19,7 +21,9 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/team" element={<Team/>} />
         <Route path="/vip" element={<VIP />} />
+        <Route path="/payment" element={<PaymentPage />} />
         <Route path="/reward" element={<Reward />} />
+        <Route path="/utr" element={<UTR />} />
       </Routes>
     </Router>
   );

@@ -1,8 +1,6 @@
 import React from "react";
 import MenuBar from "./common/MenuBar";
 import { HashLink } from "react-router-hash-link";
-import { useContext } from "react";
-import { userContext } from "../context/user.context";
 import { FaUser } from "react-icons/fa";
 
 const Profile = () => {
@@ -20,12 +18,6 @@ const Profile = () => {
             className=" bg-slate-300 p-6 w-64 rounded-xl text-xl font-bold tracking-wider text-center"
           >
             Login
-          </HashLink>
-          <HashLink
-            to={"/register"}
-            className=" bg-slate-300 p-6 w-64 rounded-xl text-xl font-bold tracking-wider text-center"
-          >
-            Register
           </HashLink>
         </div>
       </div>
