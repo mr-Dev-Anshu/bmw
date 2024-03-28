@@ -1,14 +1,24 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 import { FaArrowAltCircleLeft } from "react-icons/fa";
+import { AuthContext } from "../../context/AuthContextProvider";
+import { db } from "../../firebase.config";
 
 const UTR = () => {
+  const [utr , setUtr ] = useState()
   const navigate = useNavigate();
   const notify = () => {
     toast.success("UTR Submitted Successfully!");
     navigate("/");
   };
+
+   const {user} =  useContext(AuthContext) ; 
+    console.log (user) ; 
+
+   const handleUtr =  async() => {
+      
+   }
   return (
     <>
       <div className="flex flex-col w-full justify-start items-center gap-16">

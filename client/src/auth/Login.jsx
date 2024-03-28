@@ -1,6 +1,4 @@
 import React, { useContext, useState } from "react";
-import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
-import { auth } from "../firebase.config";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContextProvider";
 export default function Login() {
@@ -9,7 +7,6 @@ export default function Login() {
   const [verifyPage, setVerifyPage] = useState(true);
   const [message, setMessage] = useState("");
   const { loginWithPhone  } = useContext(AuthContext);
-  const [confirmObj, setConfirmObj] = useState();
 
   const handleLogin = async (e) => {
     setMessage("");
@@ -21,11 +18,8 @@ export default function Login() {
       }
       const res = await loginWithPhone(phone);
       console.log("reCAPTCHA setup complete");
-      // console.log (confirmObj) ;
       navigate("/verify") ; 
-      // console.log(res);
-      // setConfirmObj(res);
-      // setVerifyPage(false);
+      
     } catch (error) {
       console.error("Error setting up reCAPTCHA:", error);
       setMessage(error?.message);
@@ -36,7 +30,6 @@ export default function Login() {
 
   return (
     <>
-      
         <div>
           <div className="sm:mt-32  flex justify-center items-center  gap-8">
             <input
