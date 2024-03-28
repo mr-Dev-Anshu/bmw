@@ -1,76 +1,7 @@
 import React from "react";
 import { HashLink } from "react-router-hash-link";
-import logo from "../../assets/logobmw.png";
 
 const Card = ({ price, dincome, title, tincome, cycle, src }) => {
-  // const amount = price * 100;
-  // const currency = "INR";
-  // const receiptId = "qwsaq1";
-
-  // const paymentHandler = async (e) => {
-  //   const response = await fetch("http://localhost:4000/order", {
-  //     method: "POST",
-  //     body: JSON.stringify({ amount, currency, receipt: receiptId }),
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //   });
-  //   const order = await response.json();
-  //   console.log(order);
-
-  //   var options = {
-  //     key: "rzp_test_OMGxYYAK8Ggdm9",
-  //     amount,
-  //     currency,
-  //     name: "BMW",
-  //     description: "Test Transaction",
-  //     image: logo,
-  //     order_id: order?.id,
-  //     handler: async function (response) {
-  //       const body = {
-  //         ...response,
-  //       };
-
-  //       const validateResponse = await fetch(
-  //         "http://localhost:4000/order/validate",
-  //         {
-  //           method: "POST",
-  //           body: JSON.stringify(body),
-  //           headers: {
-  //             "Content-Type": "application/json",
-  //           },
-  //         }
-  //       );
-  //       const jsonRes = await validateResponse.json();
-  //       console.log(jsonRes);
-  //     },
-  //     prefill: {
-  //       name: "Test_User",
-  //       email: "Test@gmail.com",
-  //       contact: "9786890000",
-  //     },
-  //     notes: {
-  //       address: "BMW Corporate Office",
-  //     },
-  //     theme: {
-  //       color: "#3399cc",
-  //     },
-  //   };
-
-  //   var razor = new window.Razorpay(options);
-  //   razor.on("payment.failed", function (response) {
-  //     alert(response.error.code);
-  //     alert(response.error.description);
-  //     alert(response.error.source);
-  //     alert(response.error.step);
-  //     alert(response.error.reason);
-  //     alert(response.error.metadata.order_id);
-  //     alert(response.error.metadata.payment_id);
-  //   });
-  //   razor.open();
-  //   e.preventDefault();
-  // };
-
   return (
     <div className="flex justify-between bg-gray-200 rounded-xl">
       <div className="flex gap-6">

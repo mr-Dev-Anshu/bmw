@@ -24,6 +24,7 @@ function App() {
         <Route path="/payment" element={<PaymentPage />} />
         <Route path="/reward" element={<Reward />} />
         <Route path="/utr" element={<UTR />} />
+        <Route path="/login" element={<UTR />} />
       </Routes>
     </Router>
   );

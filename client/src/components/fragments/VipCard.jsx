@@ -1,5 +1,3 @@
-import v1 from "../../assets/1.png"
-
 export const VipCard = (props) => {
   return (
     <div className={`flex justify-between bg-${props.color}-500 items-center px-12 shadow-md shadow-blue-700 rounded-xl`}>
