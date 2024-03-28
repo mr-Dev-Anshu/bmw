@@ -6,11 +6,11 @@ import { FaArrowAltCircleLeft } from "react-icons/fa";
 const PaymentPage = () => {
   return (
     <div className="pt-6">
-    <Link to={"/"}>
-          <p className="px-6">
-            <FaArrowAltCircleLeft size={36} color="blue" />
-          </p>
-        </Link>
+      <Link to={"/"}>
+        <p className="px-6">
+          <FaArrowAltCircleLeft size={36} color="blue" />
+        </p>
+      </Link>
       <p className="text-center text-5xl font-semibolds ">Pay here!</p>
       <p className=" mt-12 text-2xl flex justify-center gap-10 font-semibold ">
         <span>1. Scan QR Code</span> <span> 2. Pay the amount</span>

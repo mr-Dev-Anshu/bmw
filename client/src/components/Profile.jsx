@@ -1,8 +1,20 @@
 import React, { useContext } from "react";
 import MenuBar from "./common/MenuBar";
-import { FaUser } from "react-icons/fa";
+import { FaArrowAltCircleLeft, FaUser } from "react-icons/fa";
 import { AuthContext } from "../context/AuthContextProvider";
 import { Link } from "react-router-dom";
+
+const TransactionCard = () => {
+  return (
+    <div className="flex items-center shadow-md shadow-green-500 p-3 rounded-xl gap-12">
+      <div className="h-16 w-16 rounded-full grid place-items-center bg-green-400">
+        <p className="text-3xl font-extrabold text-white">₹</p>
+      </div>
+      <p className="text-xl font-bold">Transaction Amount : ₹ 475</p>
+      <p>10:35 PM</p>
+    </div>
+  );
+};
 
 const Profile = () => {
   const { user } = useContext(AuthContext);
@@ -10,9 +22,31 @@ const Profile = () => {
   return (
     <>
       <MenuBar />
-      <div className=" h-[100vh] w-full flex justify-center items-center ">
+      <>
         {user ? (
-          <div>{user.phoneNumber}</div>
+          <div className="p-3">
+            <div className="h-[100px] flex gap-12 items-center shadow-lg shadow-blue-500 rounded-xl p-4">
+              <Link to={"/"}>
+                <p className="px-6">
+                  <FaArrowAltCircleLeft size={36} color="blue" />
+                </p>
+              </Link>
+              <div className="h-full w-[75px] flex justify-center items-center">
+                <FaUser size={48} />
+              </div>
+              <p className="text-2xl font-bold">{user.phoneNumber}</p>
+            </div>
+            <p className="text-center mt-12 text-3xl font-bold ">
+              Your Transactions
+            </p>
+            <div className="mt-6 mb-24 flex flex-col gap-8">
+              <TransactionCard />
+              <TransactionCard />
+              <TransactionCard />
+              <TransactionCard />
+              <TransactionCard />
+            </div>
+          </div>
         ) : (
           <div className=" flex flex-col justify-center items-center h-fit">
             <FaUser size={64} />
@@ -26,7 +60,7 @@ const Profile = () => {
             </div>
           </div>
         )}
-      </div>
+      </>
     </>
   );
 };
