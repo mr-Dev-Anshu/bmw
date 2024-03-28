@@ -13,7 +13,7 @@ const PaymentPage = () => {
         </Link>
       <p className="text-center text-5xl font-semibolds ">Pay here!</p>
       <p className=" mt-12 text-2xl flex justify-center gap-10 font-semibold ">
-        <span>1. Scan QR Code</span> <span> 2. Pay the amound</span>
+        <span>1. Scan QR Code</span> <span> 2. Pay the amount</span>
         <span> 3. Submit the UTR no.</span>
       </p>
       <div className=" flex flex-col justify-center items-center mt-12">
