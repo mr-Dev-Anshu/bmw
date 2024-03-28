@@ -8,7 +8,15 @@ const Profile = () => {
   const { user } = useContext(AuthContext);
   console.log(user);
   return (
-    <div>{user ? <div>{user?.phoneNumber}</div> : <div>Login first</div>}</div>
+    <div>
+      {user ? (
+        <div>{user?.phoneNumber}</div>
+      ) : (
+        <div>
+          <MenuBar />
+        </div>
+      )}
+    </div>
   );
 };
 
