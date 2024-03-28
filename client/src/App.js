@@ -9,6 +9,8 @@ import VIP from "./components/pages/VIP";
 import Reward from "./components/pages/Reward";
 import PaymentPage from "./components/pages/PaymentPage";
 import UTR from "./components/pages/UTR";
+import Login from "./auth/Login";
+import VerifyOtp from "./auth/VerifyOtp";
 
 function App() {
   return (
@@ -24,7 +26,8 @@ function App() {
         <Route path="/payment" element={<PaymentPage />} />
         <Route path="/reward" element={<Reward />} />
         <Route path="/utr" element={<UTR />} />
-        <Route path="/login" element={<UTR />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/verify" element={<VerifyOtp />} />
       </Routes>
     </Router>
   );
