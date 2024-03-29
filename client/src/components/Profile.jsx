@@ -1,24 +1,30 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import MenuBar from "./common/MenuBar";
 import { FaArrowAltCircleLeft, FaUser } from "react-icons/fa";
 import { AuthContext } from "../context/AuthContextProvider";
 import { Link } from "react-router-dom";
 
 const TransactionCard = () => {
+  const { transactions } = useContext(AuthContext);
+
   return (
-    <div className="flex items-center shadow-md shadow-green-500 p-3 rounded-xl gap-12">
-      <div className="h-16 w-16 rounded-full grid place-items-center bg-green-400">
-        <p className="text-3xl font-extrabold text-white">₹</p>
-      </div>
-      <p className="text-xl font-bold">Transaction Amount : ₹ 475</p>
-      <p>10:35 PM</p>
-    </div>
+    <>
+      {transactions?.map((item) => (
+        <div className="flex items-center shadow-md shadow-green-500 p-3 rounded-xl gap-12 ">
+          <div className="h-16 w-16 rounded-full grid place-items-center bg-green-400">
+            <p className="text-3xl font-extrabold text-white">₹</p>
+          </div>
+          <p className="text-xl font-bold">UTR Number -- {item?.utr} </p>
+          <p>{item?.time}</p>
+        </div>
+      ))}
+    </>
   );
 };
 
 const Profile = () => {
-  const { user } = useContext(AuthContext);
-  console.log(user);
+  const { user, transactions } = useContext(AuthContext);
+  console.log(transactions);
   return (
     <>
       <MenuBar />
@@ -41,10 +47,10 @@ const Profile = () => {
             </p>
             <div className="mt-6 mb-24 flex flex-col gap-8">
               <TransactionCard />
+              {/* <TransactionCard />
               <TransactionCard />
               <TransactionCard />
-              <TransactionCard />
-              <TransactionCard />
+              <TransactionCard /> */}
             </div>
           </div>
         ) : (
