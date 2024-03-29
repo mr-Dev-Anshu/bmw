@@ -12,13 +12,13 @@ const Card = ({ price, dincome, title, tincome, cycle, src }) => {
         <div className="grid place-items-start py-4 font-semibold">
           <p className="font-extrabold tracking-wider">{title}</p>
           <p>Daily Income: ₹{dincome}</p>
-          <p>Totoal Income: ₹{tincome}</p>
+          <p>Total Income: ₹{tincome}</p>
           <p>Cycle: {cycle}</p>
         </div>
       </div>
       <div className="grid place-items-center  h-full pr-12 ">
         <HashLink
-          to={"/payment"}
+          to={"/confirm"}
           className="p-4 bg-blue-700 rounded-xl text-white font-semibold"
         >
           Buy Now

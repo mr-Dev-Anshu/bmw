@@ -11,6 +11,7 @@ import PaymentPage from "./components/pages/PaymentPage";
 import UTR from "./components/pages/UTR";
 import Login from "./auth/Login";
 import VerifyOtp from "./auth/VerifyOtp";
+import ConfirmBuy from "./components/pages/ConfirmBuy";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/utr" element={<UTR />} />
         <Route path="/login" element={<Login />} />
         <Route path="/verify" element={<VerifyOtp />} />
+        <Route path="/confirm" element={<ConfirmBuy />} />
       </Routes>
     </Router>
   );
