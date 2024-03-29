@@ -14,7 +14,6 @@ const Home = () => {
         BMW
       </p>
       </Link>
-     
       <div className="w-full p-2">
         <SliderComponent />
       </div>

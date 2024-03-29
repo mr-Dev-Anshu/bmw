@@ -8,8 +8,9 @@ export default function Login() {
   const [verifyPage, setVerifyPage] = useState(true);
   const [message, setMessage] = useState("");
   const { loginWithPhone } = useContext(AuthContext);
-
+  const [loading , setLoading ] = useState (false ) ;
   const handleLogin = async (e) => {
+    setLoading(true) 
     setMessage("");
     e.preventDefault();
     // console.log(phone);
@@ -19,10 +20,12 @@ export default function Login() {
       }
       const res = await loginWithPhone(phone);
       console.log("reCAPTCHA setup complete");
+      setLoading(false) 
       navigate("/verify");
     } catch (error) {
       console.error("Error setting up reCAPTCHA:", error);
       setMessage(error?.message);
+      setLoading(false) ;
     }
   };
 
@@ -50,7 +53,7 @@ export default function Login() {
                   className="py-2 px-4 bg-slate-800 rounded text-white mt-2 hover:bg-blue-700 duration-300"
                   onClick={handleLogin}
                 >
-                  Get OTP
+                { loading? <span className="text-blue-600 ">  Loading... </span>:  "Get OTP"}
                 </button>
               </div>
             </div>
