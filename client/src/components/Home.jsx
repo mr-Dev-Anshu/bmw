@@ -3,14 +3,18 @@ import SliderComponent from "../components/SliderComponent";
 import MenuBar from "./common/MenuBar";
 import SlideButton from "./SlideButton";
 import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <div className=" relative h-[100vh] bg-blue-600">
       <MenuBar />
-      <p className="px-6 py-3 text-3xl tracking-widest text-white font-bold">
+      <Link to={"/"}>
+      <p className="px-6 py-3 text-3xl tracking-widest text-white font-bold cursor-pointer ">
         BMW
       </p>
+      </Link>
+     
       <div className="w-full p-2">
         <SliderComponent />
       </div>
